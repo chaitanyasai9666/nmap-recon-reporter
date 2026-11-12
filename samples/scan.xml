@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Synthetic example in Nmap's -oX format: a deliberately vulnerable lab VM and a hardened server. Not a scan of real hosts. -->
+<nmaprun scanner="nmap" args="nmap -sV -T4 -oX - 192.168.56.101-102" version="7.98">
+  <host>
+    <status state="up"/>
+    <address addr="192.168.56.101" addrtype="ipv4"/>
+    <ports>
+      <port protocol="tcp" portid="21"><state state="open"/><service name="ftp" product="vsftpd" version="2.3.4"/></port>
+      <port protocol="tcp" portid="22"><state state="open"/><service name="ssh" product="OpenSSH" version="4.7p1"/></port>
+      <port protocol="tcp" portid="23"><state state="open"/><service name="telnet" product="Linux telnetd"/></port>
+      <port protocol="tcp" portid="25"><state state="closed"/><service name="smtp"/></port>
+      <port protocol="tcp" portid="80"><state state="open"/><service name="http" product="Apache httpd" version="2.2.8"/></port>
+      <port protocol="tcp" portid="139"><state state="open"/><service name="netbios-ssn" product="Samba smbd" version="3.X - 4.X"/></port>
+      <port protocol="tcp" portid="445"><state state="open"/><service name="microsoft-ds" product="Samba smbd" version="3.X - 4.X"/></port>
+      <port protocol="tcp" portid="3306"><state state="open"/><service name="mysql" product="MySQL" version="5.0.51a"/></port>
+      <port protocol="tcp" portid="5432"><state state="open"/><service name="postgresql" product="PostgreSQL DB" version="8.3.0"/></port>
+      <port protocol="tcp" portid="5900"><state state="open"/><service name="vnc" product="VNC"/></port>
+      <port protocol="tcp" portid="6667"><state state="open"/><service name="irc" product="UnrealIRCd" version="3.2.8.1"/></port>
+    </ports>
+  </host>
+  <host>
+    <status state="up"/>
+    <address addr="192.168.56.102" addrtype="ipv4"/>
+    <ports>
+      <port protocol="tcp" portid="22"><state state="open"/><service name="ssh" product="OpenSSH" version="9.6p1"/></port>
+      <port protocol="tcp" portid="443"><state state="open"/><service name="https" product="nginx" version="1.26.2"/></port>
+    </ports>
+  </host>
+</nmaprun>
